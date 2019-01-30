@@ -5,7 +5,7 @@ curl "http://localhost:4741/jokes" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
     "joke": {
-      "text": "'"${TEXT}"'"
+      "joke_input": "'"${TEXT}"'"
     }
   }'
 
