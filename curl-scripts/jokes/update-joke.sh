@@ -1,4 +1,4 @@
-curl "http://localhost:4741/jokes/${ID}" \
+curl "http://localhost:4741/update-joke/${ID}" \
   --include \
   --request PATCH \
   --header "Content-Type: application/json" \

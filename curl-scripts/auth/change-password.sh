@@ -1,8 +1,6 @@
-#!/bin/bash
+!/bin/bash
 
-curl "http://localhost:4741/change-password" \
-  --include \
-  --request PATCH \
+curl --include --request PATCH "http://localhost:4741/change-password" \
   --header "Authorization: Token token=${TOKEN}" \
   --header "Content-Type: application/json" \
   --data '{
