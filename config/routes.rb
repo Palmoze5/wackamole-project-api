@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :jokes
+  resources :jokes, except: %i[new edit]
   # RESTful routes
   resources :examples, except: %i[new edit]
-  resources :jokes, only: %i[index show update destroy]
+  # resources :jokes, only: %i[index show update destroy]
   # Custom routes
   post '/sign-up' => 'users#signup'
   post '/sign-in' => 'users#signin'
