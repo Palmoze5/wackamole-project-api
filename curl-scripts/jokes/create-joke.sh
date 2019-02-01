@@ -1,4 +1,4 @@
-curl "http://localhost:4741/create-jokes" \
+curl "http://localhost:4741/jokes" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \

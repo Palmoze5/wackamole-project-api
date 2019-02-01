@@ -1,4 +1,4 @@
-curl "http://localhost:4741/get-jokes" \
+curl "http://localhost:4741/jokes" \
   --include \
   --request GET \
   --header "Authorization: Token token=${TOKEN}"
