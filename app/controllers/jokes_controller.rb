@@ -1,9 +1,9 @@
-class JokesController < ApplicationController
+class JokesController < ProtectedController
   before_action :set_joke, only: [:show, :update, :destroy]
 
   # GET /jokes
   def index
-    @jokes = Joke.all
+    @jokes = current_user.jokes.all
 
     render json: @jokes
   end
@@ -15,7 +15,7 @@ class JokesController < ApplicationController
 
   # POST /jokes
   def create
-    @joke = Joke.new(joke_params)
+    @joke = current_user.jokes.build(joke_params)
 
     if @joke.save
       render json: @joke, status: :created
@@ -41,11 +41,11 @@ class JokesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_joke
-      @joke = Joke.find(params[:id])
+      @joke = current_user.jokes.build(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
     def joke_params
-      params.require(:joke).permit(:joke_input)
+      params.require(:joke).permit(:joke_input, :user_id)
     end
 end
