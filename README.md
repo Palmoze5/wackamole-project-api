@@ -1,12 +1,30 @@
 ### jokesOnYou
 ## An app for aspiring comedians to make, update, view and delete their jokes.
-I want to do a JOKES API for ONE user (One to Many) - it would be conceptualized as an API for beginner level comedians who want to CREATE a joke or list of jokes, to READ (so they could refer and reflect), UPDATE (if they felt the joke needed a little more pizzazz or different angle) and DELETE (if they thought the joke didn’t get them any laughs when told in front of family/friends, strangers or small shows). I recently came up with the idea after reading a chapter in a book
+I completed a JOKES API for ONE user (One to Many) - it would be conceptualized as an API for beginner level comedians who want to CREATE a joke or list of jokes, to READ (so they could refer and reflect), UPDATE (if they felt the joke needed a little more pizzazz or different angle) and DELETE (if they thought the joke didn’t get them any laughs when told in front of family/friends, strangers or small shows). I recently came up with the idea after reading a chapter in a book
 titled, 'The Comedy Bible', by Judy Carter. I like to crack jokes, because it's not only a
 stress reliever, but it also puts people around me in good spirits, motivated and productive
 for their moments. I may not be the best joker, but I am a student, and I love learning what
 makes people laugh and what doesn't. Which is why before this project, I was informally keeping
 tabs on what things I posted on slack received emojis or text responses and what did not. I also
 kept tabs on things that I said vocally in class that either got a roar from my peers or absolutely crickets.
+
+## Work flow - Planning and Development
+1.) I developed an ERD of the one user to many jokes diagram
+2.) I wrote out user stories (link is below):
+a.) For authorizations
+b.) For creating, viewing, updating and deleting their jokes
+3.) Created a wireframe of several pages describing the user
+experience and interface (view link below)
+4.) I utilized notes taken from General Assembly
+5.) Worked on the back end first
+6.) Worked on the front end second
+7.) Within the front end, I worked on each folder and file
+one at a time.
+8.) The process would entail, work on one part of a feature (e.g.
+sign up), then test.
+9.) Add and commit on a success on feature
+10.) Push to the remote repository
+11.) Any issues would utilize outside sources (notes, google, then General Assembly issue queue)
 
 ## Scope of Project
 Design and implement API
