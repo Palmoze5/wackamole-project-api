@@ -1,16 +1,16 @@
-class JokesController < ProtectedController
-  before_action :set_joke, only: [:show, :update, :destroy]
+class JokesController < OpenReadController
+  before_action :set_joke, only: %i[update destroy]
 
   # GET /jokes
   def index
-    @jokes = current_user.jokes.all
+    @jokes = Joke.all
 
     render json: @jokes
   end
 
   # GET /jokes/1
   def show
-    render json: @joke
+    render json: Joke.find(params[:id])
   end
 
   # POST /jokes
@@ -41,7 +41,7 @@ class JokesController < ProtectedController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_joke
-      @joke = current_user.jokes.build(params[:id])
+      @joke = current_user.jokes.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
