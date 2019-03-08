@@ -1,4 +1,4 @@
-curl "http://localhost:4741/jokes/${ID}" \
+curl "http://localhost:4741/scores/${ID}" \
   --include \
   --request DELETE \
   --header "Authorization: Token token=${TOKEN}"

@@ -1,11 +1,11 @@
-curl "http://localhost:4741/jokes/${ID}" \
+curl "http://localhost:4741/scores" \
   --include \
-  --request PATCH \
+  --request POST \
   --header "Content-Type: application/json" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
-    "joke": {
-      "joke_input": "'"${TEXT}"'"
+    "score": {
+      "number": "'"${TEXT}"'"
     }
   }'
 
