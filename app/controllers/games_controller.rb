@@ -47,8 +47,8 @@ class GamesController < ProtectedController
   def update
     if (updates = params[:game]) && !updates.empty?
       game = Game.find(params[:id])
-      if (cell = updates[:cell])
-        game.cells[cell[:index].to_i] = cell[:value]
+      if (points = updates[:points])
+        game.points = game.points + 1
       end
       if (over = updates[:over])
         game.over = over
