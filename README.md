@@ -1,4 +1,4 @@
-# Wack-A-Mole
+ # Wack-A-Mole
 ### An app for aspiring comedians to make, update, view and delete their jokes.
 I want to create a Wack-A-Mole game board for the front end, with a back-end API that a user can create, view, update and delete their scores before, during and after playing a game.
 

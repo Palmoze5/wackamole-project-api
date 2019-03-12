@@ -11,10 +11,14 @@ Rails.application.routes.draw do
   patch 'scores/:id' => 'scores#update'
   delete '/scores/:id' => 'scores#destroy'
 
-  post '/games' => 'games#create'
-  get '/games' => 'games#index'
-  patch 'games/:id' => 'games#update'
-  delete '/games/:id' => 'games#destroy'
+  # post '/games' => 'games#create'
+  # get '/games' => 'games#index'
+  # patch 'games/:id' => 'games#update'
+  # delete '/games/:id' => 'games#destroy'
+
+  resources :games do
+    resources :comments
+  end
 
   # Custom routes
   post '/sign-up' => 'users#signup'
