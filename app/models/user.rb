@@ -4,5 +4,4 @@ class User < ApplicationRecord
   include Authentication
   has_many :scores
   has_many :games
-  has_many :comments
 end

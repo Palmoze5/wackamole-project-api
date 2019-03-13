@@ -1,6 +1,5 @@
 class GameSerializer < ActiveModel::Serializer
-  attributes :id, :points, :over
+  attributes :id, :points, :over, :comment
 
   belongs_to :user
-  has_many :comments
 end

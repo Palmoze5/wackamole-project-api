@@ -17,8 +17,7 @@ Rails.application.routes.draw do
   # delete '/games/:id' => 'games#destroy'
 
   resources :games do
-    resources :comments
-  end
+    end
 
   # Custom routes
   post '/sign-up' => 'users#signup'
