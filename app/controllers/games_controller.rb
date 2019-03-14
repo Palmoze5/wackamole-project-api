@@ -40,9 +40,11 @@ class GamesController < ProtectedController
     save game, :created
   end
 
-  # two main possibilities:
-  # 1 - player 'o' joining a game
-  # 2 - either player updating the game state
+  def destroy
+    @game = Game.find(params[:id])
+    @game.destroy!
+    render json: @game
+  end
 
   def update
     if (updates = params[:game]) && !updates.empty?
@@ -52,6 +54,9 @@ class GamesController < ProtectedController
       end
       if (over = updates[:over])
         game.over = over
+      end
+      if (comment = updates[:comment])
+        game.comment = comment
       end
       save game
     end
