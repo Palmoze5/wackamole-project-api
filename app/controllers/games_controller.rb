@@ -50,7 +50,7 @@ class GamesController < ProtectedController
     if (updates = params[:game]) && !updates.empty?
       game = Game.find(params[:id])
       if (points = updates[:points])
-        game.points = game.points + 1
+        game.points = points
       end
       if (over = updates[:over])
         game.over = over
