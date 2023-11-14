@@ -3,19 +3,19 @@
 source 'https://rubygems.org'
 ruby '2.5.0'
 
-gem 'active_model_serializers', '~> 0.10.6'
+gem 'active_model_serializers', '~> 0.10.8'
 gem 'bcrypt', '~> 3.1.11'
 gem 'pg', '~> 0.21'
 gem 'puma', '~> 3.11.2'
 gem 'rack-cors', '~> 1.0.2', require: 'rack/cors'
-gem 'rails', '~> 5.2.1'
+gem 'rails', '~> 5.2.1', '>= 5.2.1.1'
 
 group :development, :test do
   gem 'byebug', '~> 10.0.0', platform: :mri
-  gem 'dotenv-rails', '~> 2.2.1'
+  gem 'dotenv-rails', '~> 2.3.0'
   gem 'pry', '~> 0.11.3'
   gem 'pry-byebug', '~> 3.6.0'
-  gem 'rspec-rails', '~> 3.7.2'
+  gem 'rspec-rails', '~> 3.8.0'
   gem 'rubocop', '~> 0.52.1'
 end
 
